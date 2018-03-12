@@ -80,28 +80,28 @@ namespace SeleniumTestRun
             //browser.Close();
         }
 
-        //[Test, Order(4)]
-        //public void Logout()
-        //{
-        
-        //    IWebElement logoutbutton = browser.FindElement(By.XPath("//*[@href='/Member/Account/Logout']"));
-        //    logoutbutton.Click();
-        //    System.Threading.Thread.Sleep(2000);
-        //    //IWebElement  bbase =browser.FindElement(By.TagName("base"));
-        //    IWebElement basetitle= browser.FindElement(By.XPath("//*[@href='Join']"));
-        //    Assert.True(basetitle.Displayed);
-        //    //if (basetitle.Text == "Join")
-        //    //{
-        //    //    Assert.Pass();
-        //    //}
-        //    //else
-        //    //{
-        //    //    Assert.Fail();
-        //    //}
-        //    browser.Close();
-        //}
+        [Test, Order(4)]
+        public void Logout()
+        {
 
-        
+            IWebElement logoutbutton = browser.FindElement(By.XPath("//*[@href='/Member/Account/Logout']"));
+            logoutbutton.Click();
+            System.Threading.Thread.Sleep(2000);
+            //IWebElement  bbase =browser.FindElement(By.TagName("base"));
+            IWebElement basetitle = browser.FindElement(By.XPath("//*[@href='Join']"));
+            Assert.True(basetitle.Displayed);
+            //if (basetitle.Text == "Join")
+            //{
+            //    Assert.Pass();
+            //}
+            //else
+            //{
+            //    Assert.Fail();
+            //}
+            browser.Close();
+        }
+
+
 
     }
 }
